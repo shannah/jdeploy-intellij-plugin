@@ -39,12 +39,10 @@ jobs:
         
     - name: Grant execute permission for gradlew
       run: |
-        cd jdeploy-intellij-plugin
         chmod +x ./gradlew
 
     - name: Build Plugin
       run: |
-        cd jdeploy-intellij-plugin
         ./gradlew buildPlugin
 
     - name: Archive production artifacts
@@ -52,7 +50,7 @@ jobs:
       with:
         name: plugin
         path: |
-          jdeploy-intellij-plugin/build/distributions/*.zip
+          ./build/distributions/*.zip
           
   release:
     needs: build
@@ -78,8 +76,8 @@ jobs:
 
     - name: Delete Existing Release if Present
       run: |
-        if gh release view jdeploy-intellij-plugin-${{ steps.get_version.outputs.version }}; then
-          gh release delete jdeploy-intellij-plugin-${{ steps.get_version.outputs.version }}
+        if gh release view ${{ steps.get_version.outputs.version }}-SNAPSHOT; then
+          gh release delete ${{ steps.get_version.outputs.version }}-SNAPSHOT
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -90,8 +88,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: jdeploy-intellij-plugin-${{ steps.get_version.outputs.version }}
-        release_name: jdeploy-intellij-plugin-${{ steps.get_version.outputs.version }}
+        tag_name: ${{ steps.get_version.outputs.version }}-SNAPSHOT
+        release_name: ${{ steps.get_version.outputs.version }}-SNAPSHOT
         draft: false
         prerelease: false
 
