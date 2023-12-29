@@ -93,12 +93,19 @@ jobs:
         draft: false
         prerelease: false
 
+    - name: Identify Plugin File
+      id: find_plugin_file
+      run: |
+        PLUGIN_FILE=$(ls jdeploy-intellij-plugin-*.zip)
+        echo "::set-output name=plugin_file::${PLUGIN_FILE}"
+      shell: bash
+
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./plugin/jdeploy-intellij-plugin.zip
-        asset_name: jdeploy-intellij-plugin-${{ steps.get_version.outputs.version }}.zip
+        asset_path: ./jdeploy-intellij-plugin-*.zip
+        asset_name: ${{ steps.find_plugin_file.outputs.plugin_file }}
         asset_content_type: application/zip
