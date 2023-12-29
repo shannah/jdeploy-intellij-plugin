@@ -52,7 +52,8 @@ public class JdeployModuleBuilder extends ModuleBuilder {
     public void setupRootModel(@NotNull ModifiableRootModel modifiableRootModel) throws ConfigurationException {
         super.setupRootModel(modifiableRootModel);
         ProjectGeneratorRequestBuilder requestBuilder = new ProjectGeneratorRequestBuilder();
-        new File(modifiableRootModel.getProject().getBasePath()).delete();
+        requestBuilder.setUseExistingDirectory(true);
+
         requestBuilder.setParentDirectory(
                 new File(modifiableRootModel.getProject().getBasePath()).getParentFile()
         );
