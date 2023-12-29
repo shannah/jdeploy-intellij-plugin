@@ -1,6 +1,6 @@
 = jDeploy IntelliJ IDEA Plugin
 
-jDeploy is a Java Deployment Toolkit that creates installers for Java Desktop applications.
+https://www.jdeploy.com[jDeploy] is a Java Deployment Toolkit that creates installers for Java Desktop applications.
 
 This plugin integrates jDeploy into IntelliJ IDEA. It provides a "New Project" wizard that provides plug-and-play project templates for Swing, JavaFX, and Codname One.
 
@@ -8,12 +8,12 @@ All templates include GitHub workflows to automatically generate installers for 
 
 == Features
 
-. New Project Wizard for Swing, JavaFX, and Codename One
+. New Project Wizard for Swing, JavaFX, and https://www.codenameone.com[Codename One]
 . Open jDeploy Settings from project context menu
 
 == Requirements
 
-. IntelliJ IDEA 2021.1 or later
+. IntelliJ IDEA 2022.1 or later
 
 == Installation
 
