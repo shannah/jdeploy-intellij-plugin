@@ -1,0 +1,33 @@
+= jDeploy IntelliJ IDEA Plugin
+
+jDeploy is a Java Deployment Toolkit that creates installers for Java Desktop applications.
+
+This plugin integrates jDeploy into IntelliJ IDEA. It provides a "New Project" wizard that provides plug-and-play project templates for Swing, JavaFX, and Codname One.
+
+All templates include GitHub workflows to automatically generate installers for Windows, macOS, and Linux.
+
+== Features
+
+. New Project Wizard for Swing, JavaFX, and Codename One
+. Open jDeploy Settings from project context menu
+
+== Requirements
+
+. IntelliJ IDEA 2021.1 or later
+
+== Installation
+
+Download the latest version of the plugin from https://github.com/shannah/jdeploy-intellij-plugin/releases[the releases page] and install it using the "Install Plugin from Disk" option in IntelliJ IDEA's plugin manager.
+
+== Quick Start
+
+=== Creating a new project
+
+The "New Project" wizard will automatically create a GitHub project for your application.  Therefore, you will be asked to enter a GitHub token that has permission to create repositories.
+
+See https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens[GitHub's documentation] for more information on creating a GitHub token.
+
+Select "File" > "New" > "Project" to open the "New Project" wizard.
+
+Then select "jDeploy" from the list of project types.
+
