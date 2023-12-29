@@ -7,6 +7,10 @@ on:
     branches: '*'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  # Add other necessary permissions
+
 jobs:
   build:
 
