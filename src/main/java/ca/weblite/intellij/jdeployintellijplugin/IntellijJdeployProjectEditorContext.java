@@ -50,6 +50,11 @@ public class IntellijJdeployProjectEditorContext extends JDeployProjectEditorCon
     }
 
     @Override
+    public boolean shouldDisplayMenuBar() {
+        return false;
+    }
+
+    @Override
     public DesktopInterop getDesktopInterop() {
         return desktopInterop;
     }
