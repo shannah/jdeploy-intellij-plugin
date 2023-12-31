@@ -21,6 +21,8 @@ Download the latest version of the plugin from https://github.com/shannah/jdeplo
 
 == Quick Start
 
+https://www.jdeploy.com/docs/intellij-plugin-tutorial/[Watch Video Tutorial]
+
 === Creating a new Java Desktop Client project
 
 The "New Project" wizard will automatically create a GitHub project for your application.  Therefore, you will be asked to enter a GitHub token that has permission to create repositories.
