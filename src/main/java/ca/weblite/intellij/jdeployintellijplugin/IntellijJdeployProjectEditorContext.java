@@ -45,6 +45,11 @@ public class IntellijJdeployProjectEditorContext extends JDeployProjectEditorCon
     }
 
     @Override
+    public boolean shouldDisplayCheerpJPanel() {
+        return true;
+    }
+
+    @Override
     public boolean shouldDisplayCancelButton() {
         return true;
     }
