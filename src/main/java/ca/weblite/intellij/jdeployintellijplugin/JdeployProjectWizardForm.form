@@ -47,6 +47,7 @@
                 <item value="swing"/>
                 <item value="javafx"/>
                 <item value="codenameone"/>
+                <item value="fxgl"/>
               </model>
             </properties>
           </component>
